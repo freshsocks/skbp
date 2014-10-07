@@ -16,7 +16,7 @@ yo express
     > EJS
 npm install node-sass --save
 mkdir sass
-touch sass/main.scss
+touch sass/style.scss
 ```
 
 I'm using EJS templates instead of Jade because I want to add Polymer and other web components in the future, and EJS plays nice with vanilla HTML. I also don't like using Jade with Polymer because Polymer elements tend to have a bunch of attributes. It is often more readable to put each attribute on a newline; however, Jade is very strict about newlines and spacing, plus the syntax expects comma-separated attributes - it doesn't make for a pretty Polymer element.
@@ -68,12 +68,14 @@ Edit your _style.scss_ file and save; watch the bowser automatically reflect you
 
 Now would be a good time to save the working version we have with git.
 
+This is usually easier if you just make a repo beforehand and clone it before you start working on everything, but the world doesn't always work that way.
+
 [Adding an existing project to GitHub using the command line](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
 
 ```
 git init
 echo "node_modules\nbower_components" > .gitignore
-# Make a .gitignore file so we don't upload npm & bower packages ot our repo
+# Make a .gitignore file so we don't upload npm & bower packages ot our repo.
 git add .
 git commit -m "initial commit: sass added"
 git remote add origin <remote repository URL>
